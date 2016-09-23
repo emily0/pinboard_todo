@@ -1,5 +1,7 @@
 <div class="main-inner">
   <div class="content">
+    <%= link_to 'New post', new_post_path %>
+    <%= will_paginate %>
     <% @posts.each do |post| %>
       <article class="post">
         <div class="header">
@@ -36,6 +38,7 @@
         </div>
       </article>
     <% end %>
-  <%= link_to 'New post', new_post_path %>
+
+
   </div>
 </div>
