@@ -1,0 +1,51 @@
+.header-inner {
+  margin: 0 auto;
+  padding: 25px 0 20px;
+  position: relative;
+  width: 900px;
+  height: 40px;
+  .site-meta{
+    display: block;
+    float: left;
+    margin-top: -10px;
+    margin-left: -100px;
+  }
+  .site-nav {
+      display: block !important;
+  }
+}
+
+
+
+.menu {
+    float: right;
+    margin: 8px 50px 0 0;
+    padding-left: 0;
+    text-align: center;
+    .menu-item {
+      display: inline;
+    }
+    .menu-item ul {
+      margin:0px;
+     	padding:0px;
+    }
+    .menu-item ul li {
+      list-style:none;
+    }
+    .menu-item a{
+      width: 80px;
+      float: left;
+      display:block;
+      text-decoration: none;
+      padding:3px 5px;
+      color: #000;
+    }
+    .menu-item a:hover {
+      background: #efefef;
+      border-radius: 3px;
+      color: #EF3A4C;
+    }
+    .menu-item-icon {
+      margin-right: 5px;
+    }
+}

@@ -3,13 +3,17 @@
   <head>
     <title>Tocode</title>
     <%= csrf_meta_tags %>
-
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= render 'layouts/sidebar' %>
+    <div class="container">
+      <header id="header"><%= render 'layouts/navigation' %></header>
+      <main id="main"><%= render 'layouts/sidebar' %></main>
+      <footer id="footer"></footer>
+    </div>
     <%= yield %>
   </body>
 </html>
