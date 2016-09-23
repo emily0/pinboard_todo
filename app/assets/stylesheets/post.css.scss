@@ -1,0 +1,30 @@
+.post {
+  margin: 80px 0;
+}
+
+.post-title {
+  font-size: 26px;
+  font-weight: 40;
+  color: #8783A2;
+  text-align: left;
+}
+.post-meta {
+  margin-top: 5px;
+  margin-bottom: 20px;
+  color: #999;
+  font-size: 12px;
+}
+
+.post-body p {
+  color: #282842;
+}
+.post-more-link {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 400;
+    a {
+      color: #282842;
+      text-decoration: none;
+      border-bottom: 2px solid #282842;
+    }
+}
