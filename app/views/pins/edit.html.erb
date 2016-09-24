@@ -1,0 +1,12 @@
+<div id="page_wrapper">
+  <h1>Edit Pin</h1>
+    <div class="panel-body">
+      <div class="current_image">
+        <strong class="center">Current Image</strong><br \>
+        <%= image_tag @pin.image.url(:medium) %>
+      </div>
+      <div class="simple_form edit_pin">
+        <%= render 'form' %>
+      </div>
+    </div>
+</div>
