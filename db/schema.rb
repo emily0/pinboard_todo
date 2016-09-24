@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160923064727) do
+ActiveRecord::Schema.define(version: 20160924053527) do
 
   create_table "comments", force: :cascade do |t|
     t.string   "commenter"
@@ -26,6 +26,18 @@ ActiveRecord::Schema.define(version: 20160923064727) do
     t.text     "text"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "toread_items", force: :cascade do |t|
+    t.string   "title"
+    t.string   "url"
+    t.integer  "toread_list_id"
+    t.datetime "completed_at"
+    t.index ["toread_list_id"], name: "index_toread_items_on_toread_list_id"
+  end
+
+  create_table "toread_lists", force: :cascade do |t|
+    t.string "title"
   end
 
 end

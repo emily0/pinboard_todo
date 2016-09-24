@@ -1,0 +1,10 @@
+<div class="container">
+  <% @toread_lists.each do |toread_list| %>
+    <div class="index_row clearfix">
+      <h2 class="toread_list_title"><%= link_to toread_list.title, toread_list %></h2>
+    </div>
+  <% end %>
+  <div class="links">
+    <button class="button"><%= link_to "New List", new_toread_list_path %></button>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+<div class="row clearfix">
+  <% if toread_item.completed? %>
+    <div class="complete">
+      <%= link_to complete_toread_list_toread_item_path(@toread_list, toread_item.id), method: :patch do %>
+        <i style="opacity: 0.4;" class="fa fa-check fa-lg"></i>
+      <% end %>
+    </div>
+    <div class="toread_item">
+        <p style="opacity: 0.4;"><strike><%= toread_item.content %></strike></p>
+    </div>
+    <div class="trash">
+      <%= link_to toread_list_toread_item_path(@toread_list, toread_item.id), method: :delete, data: { confirm: "Are you sure?" } do%>
+      <i class="fa fa-trash fa-lg"></i>
+      <% end %>
+    </div>
+    <% else %>
+      <div class="complete">
+        <%= link_to complete_toread_list_toread_item_path(@toread_list, toread_item.id), method: :patch do %>
+        <i class="fa fa-check fa-lg"></i>
+        <% end %>
+      </div>
+      <div class="toread_item">
+          <p><%= toread_item.content %></p>
+          <h5><%= link_to truncate(toread_item.url, length: 45), toread_item.url %></h5>
+      </div>
+      <div class="trash">
+        <%= link_to toread_list_toread_item_path(@toread_list, toread_item.id), method: :delete, data: { confirm: "Are you sure?" } do%>
+        <i class="fa fa-trash fa-lg"></i>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+Contact GitHub API Training Shop Blog About

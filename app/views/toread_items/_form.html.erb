@@ -1,0 +1,8 @@
+<div class="add_items">
+  <%= form_for([@toread_list, @toread_list.toread_items.build]) do |f| %>
+    <%= f.text_field :title, placeholder: "New Todo" %>
+    <hr>
+    <%= f.text_field :url, placeholder: "Url" %>
+    <%= f.submit "Create"%>
+  <% end %>
+</div>
