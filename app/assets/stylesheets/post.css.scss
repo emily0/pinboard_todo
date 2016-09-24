@@ -2,11 +2,13 @@
   margin: 80px 0;
   width: 700px
 }
-
+.show-post-meta {
+  text-align: center;
+}
 .post-title {
   font-size: 26px;
   font-weight: 40;
-  color: #8783A2;
+  color: #282842;
   text-align: left;
 }
 .post-meta {
@@ -28,4 +30,28 @@
       text-decoration: none;
       border-bottom: 2px solid #282842;
     }
+}
+
+.comments{
+  width: 600px;
+  padding: 50px;
+  margin: 0 auto;
+}
+.ds-comment-info {
+  margin-bottom: 15px;
+  span{
+  padding: 5px;
+  background-color: #e9f0f7;
+  border-radius: 3px;
+  color: #60676d;
+ }
+}
+.post-self {
+  border-top: 1px solid #ccc;
+}
+.ds-comment-header {
+  color: #EF3A4C;
+  span {
+    color: #282842;
+  }
 }

@@ -1,18 +1,52 @@
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
-
-<p>
-  <strong>Text:</strong>
-  <%= @post.text %>
-</p>
-
-<h2>Comments</h2>
-<%= render @post.comments %>
-
-<h2>Add a comment:</h2>
-<%= render 'comments/form' %>
-
-<%= link_to 'Edit', edit_post_path(@post) %>
-<%= link_to 'Back', posts_path %>
+<div class="main-inner">
+  <div class="content">
+    <article class="post">
+      <div class="header">
+        <div class="post-title">
+          <h1 align="center"><%= @post.title %></h1>
+        </div>
+      </div>
+      <div class="post-meta show-post-meta">
+        <span class="post-time">
+          <%= time_ago_in_words(@post.created_at) %>
+        </span>
+        &nbsp;|&nbsp;
+        <span class="post-tags">Rails</span>
+        &nbsp;|&nbsp;
+        <span class="post-comments-count">
+          <%= pluralize(@post.comments.count, "comment") %>
+        </span>
+        &nbsp;|&nbsp;
+        <span class="post-admin">
+          <%= link_to 'Edit', edit_post_path(@post) %>
+        </span>
+        &nbsp;|&nbsp;
+        <span class="post-admin">
+          <%= link_to 'Destroy', post_path(@post),
+                  method: :delete,
+                  data: { confirm: 'Are you sure?' } %>
+        </span>
+        &nbsp;|&nbsp;
+        <span class="post-admin">
+          <%= link_to 'Back', posts_path %>
+        </span>
+      </div>
+      <div class="post-body">
+        <p><%= simple_format(@post.text) %></p>
+      </div>
+      <div class="comments">
+        <div class="ds-comment-info">
+          <span class="post-comments-count">
+            <%= pluralize(@post.comments.count, "comment") %>
+          </span>
+        </div>
+        <div class="ds-post">
+          <%= render @post.comments %>
+        </div>
+        <div class="ds-replybox">
+        <%= render 'comments/form' %>
+        </div>
+      </div>
+    </article>
+  </div>
+</div>

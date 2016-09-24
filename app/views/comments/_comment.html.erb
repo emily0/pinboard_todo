@@ -1,15 +1,14 @@
-<p>
-  <strong>Commenter:</strong>
-  <%= comment.commenter %>
-</p>
+<div class="post-self">
+  <div class="ds-comment-header">
+    <p><%= comment.commenter %>:&nbsp;<span><%= comment.body %></span></p>
+  </div>
 
-<p>
-  <strong>Comment:</strong>
-  <%= comment.body %>
-</p>
+  <div class="ds-comment-footer">
 
-<p>
-  <%= link_to 'Destroy Comment', [comment.post, comment],
-               method: :delete,
-               data: { confirm: 'Are you sure?' } %>
-</p>
+  </div>
+  <i class="fa fa-times" aria-hidden="true">
+    <%= link_to 'Destroy Comment', [comment.post, comment],
+                 method: :delete,
+                 data: { confirm: 'Are you sure?' } %>
+  </i>
+</div>
