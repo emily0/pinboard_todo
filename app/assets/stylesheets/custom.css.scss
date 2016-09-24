@@ -1,5 +1,13 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+a {
+  color: #282842;
+}
+
+a:hover {
+  color: #EF3A4C;
+}
+
 .pagination {
   border-top: #ccc;
 }

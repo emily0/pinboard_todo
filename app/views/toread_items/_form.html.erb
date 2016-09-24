@@ -1,8 +1,13 @@
-<div class="add_items">
-  <%= form_for([@toread_list, @toread_list.toread_items.build]) do |f| %>
-    <%= f.text_field :title, placeholder: "New Todo" %>
-    <hr>
-    <%= f.text_field :url, placeholder: "Url" %>
-    <%= f.submit "Create"%>
-  <% end %>
-</div>
+<%= form_for([@toread_list, @toread_list.toread_items.build]) do |f| %>
+  <div class="item-wrapper">
+    <div class="item-left">
+        <%= f.text_field :title, class: "form-control", placeholder: "Title" %>
+    </div>
+    <div class="item-left">
+        <%= f.text_field :url, class: "form-control", placeholder: "URL" %>
+    </div>
+    <div class="item-right">
+        <input class="btn btn-default item-buttom" type="submit" value="Submit">
+    </div>
+  </div>
+<% end %>

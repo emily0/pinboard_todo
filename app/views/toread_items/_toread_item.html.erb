@@ -6,7 +6,8 @@
       <% end %>
     </div>
     <div class="toread_item">
-        <p style="opacity: 0.4;"><strike><%= toread_item.content %></strike></p>
+        <p style="opacity: 0.4;"><strike><%= toread_item.title %></strike></p>
+        <h5 style="opacity: 0.4;"><strike><%= link_to truncate(toread_item.url, length: 40), toread_item.url %></strike></h5>
     </div>
     <div class="trash">
       <%= link_to toread_list_toread_item_path(@toread_list, toread_item.id), method: :delete, data: { confirm: "Are you sure?" } do%>
@@ -20,8 +21,8 @@
         <% end %>
       </div>
       <div class="toread_item">
-          <p><%= toread_item.content %></p>
-          <h5><%= link_to truncate(toread_item.url, length: 45), toread_item.url %></h5>
+          <p><%= toread_item.title %></p>
+          <h5><%= link_to truncate(toread_item.url, length: 40), toread_item.url %></h5>
       </div>
       <div class="trash">
         <%= link_to toread_list_toread_item_path(@toread_list, toread_item.id), method: :delete, data: { confirm: "Are you sure?" } do%>
@@ -30,4 +31,3 @@
       </div>
     <% end %>
   </div>
-Contact GitHub API Training Shop Blog About

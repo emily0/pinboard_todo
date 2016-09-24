@@ -69,6 +69,6 @@ class ToreadListsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def toread_list_params
-      params.require(:toread_list).permit(:title, :description)
+      params.require(:toread_list).permit(:title)
     end
 end

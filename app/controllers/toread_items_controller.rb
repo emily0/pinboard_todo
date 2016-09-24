@@ -32,6 +32,6 @@ class ToreadItemsController < ApplicationController
   end
 
   def toread_item_params
-    params[:toread_item].permit(:content, :url)
+    params[:toread_item].permit(:title, :url)
   end
 end

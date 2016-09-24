@@ -1,16 +1,15 @@
-
-<div class="container">
-  <h2 class="toread_list_title"><%= @toread_list.title %></h2>
-  <div id="toread_items_wrapper">
-    <%= render @toread_list.toread_items %>
-    <div id="form">
+<div class="main-inner">
+  <div class="content">
+    <div class="tolist">
+      <h2 class="toread_list_title show_toread_list_title"><%= @toread_list.title %></h2>
+      <%= render @toread_list.toread_items %>
       <%= render "toread_items/form" %>
+      <hr>
+      <div class="links">
+        <%= link_to 'Edit', edit_toread_list_path(@toread_list) %> |
+        <%= link_to 'Delete', toread_list_path(@toread_list), method: :delete, data: { confirm: "Are you sure?" } %> |
+        <%= link_to 'Back', toread_lists_path %>
+      </div>
     </div>
-  </div>
-
-  <div class="links">
-    <%= link_to 'Edit', edit_toread_list_path(@toread_list) %> |
-    <%= link_to 'Delete', toread_list_path(@toread_list), method: :delete, data: { confirm: "Are you sure?" } %> |
-    <%= link_to 'Back', toread_lists_path %>
   </div>
 </div>
